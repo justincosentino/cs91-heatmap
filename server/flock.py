@@ -16,8 +16,8 @@ app.debug = True
 db = client.test_database
 
 LOCATION_FIELDS = ['lat', 'long', 'time']
-#LOCATION_FIELDS = ['lat', 'long', 'time', 'uuid']
-USER_FIELDS = ['id']
+#LOCATION_FIELDS = ['lat', 'long', 'time', 'uid']
+USER_FIELDS = ['uid']
 
 
 @app.route("/getLocations")
@@ -27,44 +27,35 @@ def getLocation():
     for location in locations.find():
         print location
         if "time" in location:
-            if int(location["time"]) < time() + 900:
+            if int(location["time"]) > time() - 900:
                 str_locs.append(location)
     return json.dumps(str_locs, default=json_util.default)
 
 @app.route("/postLocation")
 def postLocation():
-    #print verifyRequest(request)
-    location = {}
-    print request.args
-    for field in LOCATION_FIELDS:
-        val = request.args.get(field)
-        if not val:
-            return "Bad request", 400
-        location[field] = val
+    location = getFieldsOr400(request, LOCATION_FIELDS)
+    if type(location) == tuple: return location
     db.locations.insert(location)
     return "Success" , str(location)
 
 @app.route("/registerUser")
 def registerUser():
-    location = {}
-    print request.args
-    for field in LOCATION_FIELDS:
-        val = request.args.get(field)
-        if not val:
-            return "Bad request", 400
-        location[field] = val
+    user = getFieldsOr400(request, USER_FIELDS)
+    if type(user) == tuple: return user
 
+    existing = db.users.find_one({'uid': user['uid']})
+    if existing:
+        return "User already exists"
 
-    uuid.uuid4().hex
-    db.users.find(id=regus)
-
-    pass
+    # TODO: gen uid based off input uuid.uuid4().hex
+    db.users.insert(user)
+    return "Success" , str(user)
 
 @app.route("/getClusters")
 def getClusters():
     pass
 
-def verifyRequest(request):
+def verifyHash(request):
     sorted_params = request.args.keys()
     sorted_params.sort()
 
@@ -81,6 +72,14 @@ def verifyRequest(request):
         
     return hash == request.args['hash'] and salt == request.args['salt']
 
+def getFieldsOr400(request, fields):
+    obj = {}
+    for field in fields:
+        val = request.args.get(field)
+        if not val:
+            return "Bad request", 400
+        obj[field] = val
+    return obj
     
 if __name__ == "__main__":
     app.run()
