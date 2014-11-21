@@ -5,7 +5,7 @@ angular.module('starter.services', [])
   appState = JSON.parse(appState);
   if (appState == null) {
     appState = {
-      serverUrl: "http://localhost:5000/",
+      serverUrl: "http://localhost:5000",
       deviceId: 1,
       locationServices: true,
       fuzzingValue: 0,

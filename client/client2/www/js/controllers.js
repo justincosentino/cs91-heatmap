@@ -1,17 +1,15 @@
 angular.module('starter.controllers', ['ionic'])
 
-.controller('MapCtrl', function($ionicPlatform, $scope, $appSettings) {
+.controller('MapCtrl', function($ionicPlatform, $scope, $appSettings, $http) {
 
-	$scope.refresh = function() {
-		alert("refresh");
-	}
+	
 
 	$ionicPlatform.ready(function() {
 		const SWARTHMORE = new plugin.google.maps.LatLng(39.90652,-75.35199);
-
+		
 		var div = document.getElementById("map_canvas");
 
-		var map = plugin.google.maps.Map.getMap({
+		map = plugin.google.maps.Map.getMap({
 		  'backgroundColor': 'white',
 		  'mapType': plugin.google.maps.MapTypeId.ROADMAP,
 		  'controls': {
@@ -40,6 +38,8 @@ angular.module('starter.controllers', ['ionic'])
 
 		var evtName = plugin.google.maps.event.dragend;
 
+		console.log("MAPPPPPPPP");
+		console.log(map)
 		map.setDiv(div);
 
 		var onSuccess = function(position) {
@@ -63,6 +63,28 @@ angular.module('starter.controllers', ['ionic'])
 		var watchId = navigator.geolocation.watchPosition(onSuccess,
 	                                         onError,
 	                                         options);
+
+		$scope.refresh = function() {
+			$http.get($appSettings.serverUrl + '/getLocations').
+			  success(function(data, status, headers, config) {
+			  	for (var i = 0; i < data.length; i++) {
+			  		console.log(data[i]);
+			  		console.log(map);
+			  // 		var point = plugin.google.maps.LatLng(float(data[i].lat), float(data[i].long));
+			  // 		console.log(point);
+			  // 		map.addCircle({
+					//   'center': point,
+					//   'radius': 100,
+					//   'strokeColor' : '#880000',
+					//   'strokeWidth': 5,
+					//   'fillColor' : '#880000'
+					// });
+			  	}
+			  }).
+			  error(function(data, status, headers, config) {
+			  	alert("Whoops, something went wrong. Please try again.")
+			  });		
+		}
 	});  
 })
 
