@@ -1,6 +1,11 @@
 angular.module('starter.controllers', ['ionic'])
 
-.controller('MapCtrl', function($ionicPlatform, $scope) {
+.controller('MapCtrl', function($ionicPlatform, $scope, $appSettings) {
+
+	$scope.refresh = function() {
+		alert("refresh");
+	}
+
 	$ionicPlatform.ready(function() {
 		const SWARTHMORE = new plugin.google.maps.LatLng(39.90652,-75.35199);
 
@@ -36,17 +41,33 @@ angular.module('starter.controllers', ['ionic'])
 		var evtName = plugin.google.maps.event.dragend;
 
 		map.setDiv(div);
+
+		var onSuccess = function(position) {
+		    console.log('Latitude: '          + position.coords.latitude          + '\n' +
+		          'Longitude: '         + position.coords.longitude         + '\n' +
+		          'Altitude: '          + position.coords.altitude          + '\n' +
+		          'Accuracy: '          + position.coords.accuracy          + '\n' +
+		          'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+		          'Heading: '           + position.coords.heading           + '\n' +
+		          'Speed: '             + position.coords.speed             + '\n' +
+		          'Timestamp: '         + position.timestamp                + '\n');
+		}
+
+		function onError(error) {
+			console.log('code: '    + error.code    + '\n' +
+		          		'message: ' + error.message + '\n');
+		}
+
+		var options = {timeout: 5000, enableHighAccuracy: false};
+		
+		var watchId = navigator.geolocation.watchPosition(onSuccess,
+	                                         onError,
+	                                         options);
 	});  
 })
 
-.controller('SettingsCtrl', function($scope) {
+.controller('SettingsCtrl', function($scope, $appSettings) {
+	$scope.locationServices = $appSettings.locationServices;
+	$scope.fuzzingValue = $appSettings.fuzzingValue;
+	console.log($scope.fuzzingValue + " " + $scope.locationServices);
 })
-
-.controller('FriendsCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
-})
-
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.friendId);
-});
-
