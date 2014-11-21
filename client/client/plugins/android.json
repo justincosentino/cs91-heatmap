@@ -69,7 +69,17 @@
                             "count": 2
                         },
                         {
-                            "xml": "<meta-data android:name=\"com.google.android.maps.v2.API_KEY\" android:value=\"AIzaSyCIAIDdMlMfnS9Suo6qWYXxdNReKtjR9XI\" />",
+                            "xml": "<meta-data android:name=\"com.google.android.maps.v2.API_KEY\" android:value=\"AIzaSyBSIv_7W2RiLmnkR0I-hkaNyTlNBL9xofw\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
                             "count": 1
                         }
                     ]
@@ -81,8 +91,11 @@
         "org.apache.cordova.splashscreen": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
         },
+        "org.apache.cordova.geolocation": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
         "plugin.google.maps": {
-            "API_KEY_FOR_ANDROID": "AIzaSyCIAIDdMlMfnS9Suo6qWYXxdNReKtjR9XI",
+            "API_KEY_FOR_ANDROID": "AIzaSyBSIv_7W2RiLmnkR0I-hkaNyTlNBL9xofw",
             "PACKAGE_NAME": "io.cordova.hellocordova"
         }
     },

@@ -11,3 +11,508 @@ https://developer.apple.com/icloud/documentation/data-storage/
 
 2014-11-09 20:55:39.719 HelloCordova[61800:495263] Resetting plugins due to page load.
 2014-11-09 20:55:40.216 HelloCordova[61800:495263] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/A3ED6AC1-98BD-4084-8FB6-2C82451F104C/HelloCordova.app/www/index.html
+2014-11-14 13:45:06.021 Flock[49181:443136] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/CAE74334-6F82-484D-8626-543B510DE53F/Library/Cookies/Cookies.binarycookies
+2014-11-14 13:45:06.134 Flock[49181:443136] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-14 13:45:06.134 Flock[49181:443136] Multi-tasking -> Device: YES, App: YES
+2014-11-14 13:45:06.142 Flock[49181:443136] Unlimited access to network resources
+2014-11-14 13:45:06.145 Flock[49181:443136] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-14 13:45:06.461 Flock[49181:443136] [CDVTimer][splashscreen] 24.322033ms
+2014-11-14 13:45:06.461 Flock[49181:443136] [CDVTimer][TotalPluginStartup] 24.533987ms
+2014-11-14 13:45:06.525 Flock[49181:443136] Resetting plugins due to page load.
+2014-11-14 13:45:06.797 Flock[49181:443136] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/A0DFEF36-73BA-48CA-990E-BE595F8EB214/Flock.app/www/index.html
+2014-11-14 13:45:06.867 Flock[49181:443136] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-14 14:11:18.883 Flock[51516:462838] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/08270341-0B65-4C35-BB35-04D7F849663D/Library/Cookies/Cookies.binarycookies
+2014-11-14 14:11:18.980 Flock[51516:462838] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-14 14:11:18.981 Flock[51516:462838] Multi-tasking -> Device: YES, App: YES
+2014-11-14 14:11:18.988 Flock[51516:462838] Unlimited access to network resources
+2014-11-14 14:11:19.000 Flock[51516:462838] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-14 14:11:19.386 Flock[51516:462838] [CDVTimer][splashscreen] 28.862000ms
+2014-11-14 14:11:19.386 Flock[51516:462838] [CDVTimer][TotalPluginStartup] 29.016972ms
+2014-11-14 14:11:19.443 Flock[51516:462838] Resetting plugins due to page load.
+2014-11-14 14:11:19.829 Flock[51516:462838] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/B5292954-995F-4039-881B-69CB2F59EA7F/Flock.app/www/index.html
+2014-11-14 14:11:19.871 Flock[51516:462838] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-14 14:12:28.062 Flock[51835:464588] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/9FA72412-768E-49A0-B76B-045248B87959/Library/Cookies/Cookies.binarycookies
+2014-11-14 14:12:28.153 Flock[51835:464588] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-14 14:12:28.154 Flock[51835:464588] Multi-tasking -> Device: YES, App: YES
+2014-11-14 14:12:28.160 Flock[51835:464588] Unlimited access to network resources
+2014-11-14 14:12:28.163 Flock[51835:464588] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-14 14:12:28.385 Flock[51835:464588] [CDVTimer][splashscreen] 15.711010ms
+2014-11-14 14:12:28.385 Flock[51835:464588] [CDVTimer][TotalPluginStartup] 15.850961ms
+2014-11-14 14:12:28.434 Flock[51835:464588] Resetting plugins due to page load.
+2014-11-14 14:12:28.655 Flock[51835:464588] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/FCC5E286-8B70-44A4-8C78-D971D8DCE8FD/Flock.app/www/index.html
+2014-11-14 14:12:28.707 Flock[51835:464588] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-14 14:16:01.388 Flock[52278:468256] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/6880140B-6506-4BBB-90C0-2574506C5E76/Library/Cookies/Cookies.binarycookies
+2014-11-14 14:16:01.607 Flock[52278:468256] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-14 14:16:01.607 Flock[52278:468256] Multi-tasking -> Device: YES, App: YES
+2014-11-14 14:16:01.614 Flock[52278:468256] Unlimited access to network resources
+2014-11-14 14:16:01.618 Flock[52278:468256] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-14 14:16:01.956 Flock[52278:468256] [CDVTimer][splashscreen] 133.885026ms
+2014-11-14 14:16:01.956 Flock[52278:468256] [CDVTimer][TotalPluginStartup] 134.051025ms
+2014-11-14 14:16:02.306 Flock[52278:468256] Resetting plugins due to page load.
+2014-11-14 14:16:02.635 Flock[52278:468256] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/FDB3BA2A-0B21-4022-B5BF-1E65F28C8BE1/Flock.app/www/index.html
+2014-11-14 14:16:31.139 Flock[52278:468296] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2014-11-14 14:16:31.154 Flock[52278:468256] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-14 14:20:52.686 Flock[52769:472994] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/51A7E35B-49A2-415F-8F44-04A56ABD5A0A/Library/Cookies/Cookies.binarycookies
+2014-11-14 14:20:52.884 Flock[52769:472994] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-14 14:20:52.884 Flock[52769:472994] Multi-tasking -> Device: YES, App: YES
+2014-11-14 14:20:52.891 Flock[52769:472994] Unlimited access to network resources
+2014-11-14 14:20:52.893 Flock[52769:472994] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-14 14:20:53.275 Flock[52769:472994] [CDVTimer][splashscreen] 119.709969ms
+2014-11-14 14:20:53.275 Flock[52769:472994] [CDVTimer][TotalPluginStartup] 119.856000ms
+2014-11-14 14:20:53.483 Flock[52769:472994] Resetting plugins due to page load.
+2014-11-14 14:20:53.856 Flock[52769:472994] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/67B4903D-938B-473F-8390-AE8B307C038C/Flock.app/www/index.html
+2014-11-14 14:20:53.915 Flock[52769:472994] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-14 14:20:54.321 Flock[52769:472994] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-14 14:22:59.317 Flock[53107:474771] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/2A55F388-D7BC-484D-9CE9-6D48370F7722/Library/Cookies/Cookies.binarycookies
+2014-11-14 14:22:59.524 Flock[53107:474771] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-14 14:22:59.524 Flock[53107:474771] Multi-tasking -> Device: YES, App: YES
+2014-11-14 14:22:59.530 Flock[53107:474771] Unlimited access to network resources
+2014-11-14 14:22:59.533 Flock[53107:474771] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-14 14:22:59.868 Flock[53107:474771] [CDVTimer][splashscreen] 135.955036ms
+2014-11-14 14:22:59.868 Flock[53107:474771] [CDVTimer][TotalPluginStartup] 136.124015ms
+2014-11-14 14:23:00.058 Flock[53107:474771] Resetting plugins due to page load.
+2014-11-14 14:23:00.390 Flock[53107:474771] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/D89DA232-424D-460D-81E6-1DE3CAFA53C8/Flock.app/www/index.html
+2014-11-14 14:23:02.801 Flock[53107:474771] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-14 14:23:03.064 Flock[53107:474771] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-14 14:23:29.842 Flock[53307:475646] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/3C8F8969-7052-428D-83AC-DE4E2F87CAEB/Library/Cookies/Cookies.binarycookies
+2014-11-14 14:23:29.992 Flock[53307:475646] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-14 14:23:29.993 Flock[53307:475646] Multi-tasking -> Device: YES, App: YES
+2014-11-14 14:23:29.998 Flock[53307:475646] Unlimited access to network resources
+2014-11-14 14:23:30.001 Flock[53307:475646] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-14 14:23:30.341 Flock[53307:475646] [CDVTimer][splashscreen] 116.353989ms
+2014-11-14 14:23:30.341 Flock[53307:475646] [CDVTimer][TotalPluginStartup] 116.518021ms
+2014-11-14 14:23:30.572 Flock[53307:475646] Resetting plugins due to page load.
+2014-11-14 14:23:30.898 Flock[53307:475646] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/329273B1-277A-4064-B074-8C691BB6688C/Flock.app/www/index.html
+2014-11-14 14:23:33.051 Flock[53307:475646] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-14 14:23:33.251 Flock[53307:475646] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-14 14:24:26.501 Flock[53544:476701] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/B98574AA-A0FF-43B6-A1E2-D4962C63314A/Library/Cookies/Cookies.binarycookies
+2014-11-14 14:24:27.149 Flock[53544:476701] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-14 14:24:27.149 Flock[53544:476701] Multi-tasking -> Device: YES, App: YES
+2014-11-14 14:24:27.154 Flock[53544:476701] Unlimited access to network resources
+2014-11-14 14:24:27.156 Flock[53544:476701] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-14 14:24:27.719 Flock[53544:476701] [CDVTimer][splashscreen] 315.892994ms
+2014-11-14 14:24:27.719 Flock[53544:476701] [CDVTimer][TotalPluginStartup] 316.056013ms
+2014-11-14 14:24:28.219 Flock[53544:476701] Resetting plugins due to page load.
+2014-11-14 14:24:28.768 Flock[53544:476701] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/75875F6F-4617-436A-BD66-8F8000831910/Flock.app/www/index.html
+2014-11-14 14:24:32.229 Flock[53544:476701] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-14 14:24:32.477 Flock[53544:476701] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-14 14:26:24.026 Flock[53841:478554] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/B0E303E0-1C3C-4A1E-87BD-06E960A6BFAC/Library/Cookies/Cookies.binarycookies
+2014-11-14 14:26:24.288 Flock[53841:478554] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-14 14:26:24.288 Flock[53841:478554] Multi-tasking -> Device: YES, App: YES
+2014-11-14 14:26:24.295 Flock[53841:478554] Unlimited access to network resources
+2014-11-14 14:26:24.298 Flock[53841:478554] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-14 14:26:24.768 Flock[53841:478554] [CDVTimer][splashscreen] 146.946013ms
+2014-11-14 14:26:24.768 Flock[53841:478554] [CDVTimer][TotalPluginStartup] 147.156954ms
+2014-11-14 14:26:24.964 Flock[53841:478554] Resetting plugins due to page load.
+2014-11-14 14:26:25.177 Flock[53841:478554] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/3187BA08-FA76-47FE-92B0-B018F194CE8C/Flock.app/www/index.html
+2014-11-14 14:27:39.073 Flock[54091:479827] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/B7B17FBC-756C-4FEC-930D-7824D16431E8/Library/Cookies/Cookies.binarycookies
+2014-11-14 14:27:39.177 Flock[54091:479827] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-14 14:27:39.177 Flock[54091:479827] Multi-tasking -> Device: YES, App: YES
+2014-11-14 14:27:39.183 Flock[54091:479827] Unlimited access to network resources
+2014-11-14 14:27:39.186 Flock[54091:479827] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-14 14:27:39.394 Flock[54091:479827] [CDVTimer][splashscreen] 19.977033ms
+2014-11-14 14:27:39.394 Flock[54091:479827] [CDVTimer][TotalPluginStartup] 20.208001ms
+2014-11-14 14:27:39.438 Flock[54091:479827] Resetting plugins due to page load.
+2014-11-14 14:27:39.770 Flock[54091:479827] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/795D4D4F-7E1C-4115-8A00-B409C8C648D1/Flock.app/www/index.html
+2014-11-14 14:27:42.409 Flock[54091:479827] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-14 14:27:42.637 Flock[54091:479827] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-14 14:28:24.064 Flock[54313:480905] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/D9953A56-5AF3-49D7-B938-FB1DE4F884DC/Library/Cookies/Cookies.binarycookies
+2014-11-14 14:28:24.166 Flock[54313:480905] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-14 14:28:24.166 Flock[54313:480905] Multi-tasking -> Device: YES, App: YES
+2014-11-14 14:28:24.173 Flock[54313:480905] Unlimited access to network resources
+2014-11-14 14:28:24.176 Flock[54313:480905] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-14 14:28:24.455 Flock[54313:480905] [CDVTimer][splashscreen] 22.539973ms
+2014-11-14 14:28:24.456 Flock[54313:480905] [CDVTimer][TotalPluginStartup] 22.765994ms
+2014-11-14 14:28:24.513 Flock[54313:480905] Resetting plugins due to page load.
+2014-11-14 14:28:24.784 Flock[54313:480905] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/7931AF23-BABA-4A17-9B8E-849660F83A56/Flock.app/www/index.html
+2014-11-14 14:28:37.283 Flock[54313:480920] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2014-11-14 14:28:37.296 Flock[54313:480905] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-14 14:28:37.408 Flock[54313:480905] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-19 20:38:26.565 Flock[9466:78469] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/5E60D7DB-03B4-452D-882B-38265AEE925E/Library/Cookies/Cookies.binarycookies
+2014-11-19 20:38:26.683 Flock[9466:78469] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-19 20:38:26.683 Flock[9466:78469] Multi-tasking -> Device: YES, App: YES
+2014-11-19 20:38:26.792 Flock[9466:78469] Unlimited access to network resources
+2014-11-19 20:38:26.809 Flock[9466:78469] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-19 20:38:30.451 Flock[9466:78469] [CDVTimer][splashscreen] 1023.424029ms
+2014-11-19 20:38:30.452 Flock[9466:78469] [CDVTimer][TotalPluginStartup] 1023.648977ms
+2014-11-19 20:38:30.564 Flock[9466:78469] Resetting plugins due to page load.
+2014-11-19 20:38:31.238 Flock[9466:78469] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/3E6CF05B-2556-4D90-9E51-FD0C58D55A35/Flock.app/www/index.html
+2014-11-19 20:39:13.092 Flock[9466:78507] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2014-11-19 20:39:13.101 Flock[9466:78469] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-19 20:39:13.730 Flock[9466:78469] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-19 20:39:40.504 Flock[9705:79690] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/29980746-D312-4AF8-873B-4DF88EA9C117/Library/Cookies/Cookies.binarycookies
+2014-11-19 20:39:40.678 Flock[9705:79690] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-19 20:39:40.678 Flock[9705:79690] Multi-tasking -> Device: YES, App: YES
+2014-11-19 20:39:40.684 Flock[9705:79690] Unlimited access to network resources
+2014-11-19 20:39:40.686 Flock[9705:79690] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-19 20:39:41.009 Flock[9705:79690] [CDVTimer][splashscreen] 146.783054ms
+2014-11-19 20:39:41.009 Flock[9705:79690] [CDVTimer][TotalPluginStartup] 146.943033ms
+2014-11-19 20:39:41.246 Flock[9705:79690] Resetting plugins due to page load.
+2014-11-19 20:39:41.514 Flock[9705:79690] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/775943BC-3CC8-4DEA-AE6F-89C437288089/Flock.app/www/index.html
+2014-11-19 20:39:44.096 Flock[9705:79690] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-19 20:39:44.337 Flock[9705:79690] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-19 20:40:02.877 Flock[9900:80508] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/0CE452DD-DED6-4147-BAF4-D7C6A1A8533F/Library/Cookies/Cookies.binarycookies
+2014-11-19 20:40:02.984 Flock[9900:80508] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-19 20:40:02.984 Flock[9900:80508] Multi-tasking -> Device: YES, App: YES
+2014-11-19 20:40:02.991 Flock[9900:80508] Unlimited access to network resources
+2014-11-19 20:40:02.994 Flock[9900:80508] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-19 20:40:03.276 Flock[9900:80508] [CDVTimer][splashscreen] 16.873956ms
+2014-11-19 20:40:03.276 Flock[9900:80508] [CDVTimer][TotalPluginStartup] 17.033994ms
+2014-11-19 20:40:03.339 Flock[9900:80508] Resetting plugins due to page load.
+2014-11-19 20:40:03.586 Flock[9900:80508] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/E1B67237-48E7-44AE-A1AD-A2BC75B623C0/Flock.app/www/index.html
+2014-11-19 20:40:10.864 Flock[9900:80508] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-19 20:40:11.019 Flock[9900:80508] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-19 20:40:29.535 Flock[10089:81301] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/5EB2EC11-E8BB-458D-A40C-2967D5FEDF96/Library/Cookies/Cookies.binarycookies
+2014-11-19 20:40:29.606 Flock[10089:81301] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-19 20:40:29.606 Flock[10089:81301] Multi-tasking -> Device: YES, App: YES
+2014-11-19 20:40:29.611 Flock[10089:81301] Unlimited access to network resources
+2014-11-19 20:40:29.614 Flock[10089:81301] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-19 20:40:29.849 Flock[10089:81301] [CDVTimer][splashscreen] 17.543018ms
+2014-11-19 20:40:29.849 Flock[10089:81301] [CDVTimer][TotalPluginStartup] 17.690957ms
+2014-11-19 20:40:29.909 Flock[10089:81301] Resetting plugins due to page load.
+2014-11-19 20:40:30.141 Flock[10089:81301] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/75D3E26D-CF82-48F2-9D2A-FF318D30C4FF/Flock.app/www/index.html
+2014-11-19 20:40:33.277 Flock[10089:81301] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-19 20:40:33.478 Flock[10089:81301] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-19 20:42:41.101 Flock[10409:83536] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/EA47288A-22C6-47F0-AD84-E1DFF72A8226/Library/Cookies/Cookies.binarycookies
+2014-11-19 20:42:41.270 Flock[10409:83536] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-19 20:42:41.270 Flock[10409:83536] Multi-tasking -> Device: YES, App: YES
+2014-11-19 20:42:41.276 Flock[10409:83536] Unlimited access to network resources
+2014-11-19 20:42:41.279 Flock[10409:83536] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-19 20:42:41.693 Flock[10409:83536] [CDVTimer][splashscreen] 181.010962ms
+2014-11-19 20:42:41.693 Flock[10409:83536] [CDVTimer][TotalPluginStartup] 181.205988ms
+2014-11-19 20:42:41.967 Flock[10409:83536] Resetting plugins due to page load.
+2014-11-19 20:42:42.168 Flock[10409:83536] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/6937ABB6-77BD-4CAA-85C0-7798B30C3707/Flock.app/www/index.html
+2014-11-19 21:55:28.288 Flock[12921:104996] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/1C668930-7AF7-4806-89A3-EA953C43C878/Library/Cookies/Cookies.binarycookies
+2014-11-19 21:55:28.453 Flock[12921:104996] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-19 21:55:28.454 Flock[12921:104996] Multi-tasking -> Device: YES, App: YES
+2014-11-19 21:55:28.461 Flock[12921:104996] Unlimited access to network resources
+2014-11-19 21:55:28.464 Flock[12921:104996] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-19 21:55:28.913 Flock[12921:104996] [CDVTimer][splashscreen] 208.047986ms
+2014-11-19 21:55:28.913 Flock[12921:104996] [CDVTimer][TotalPluginStartup] 208.249032ms
+2014-11-19 21:55:29.262 Flock[12921:104996] Resetting plugins due to page load.
+2014-11-19 21:55:29.520 Flock[12921:104996] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/5CCBF2A5-D8A8-467D-AD2A-E65A8601EA70/Flock.app/www/index.html
+2014-11-19 21:57:11.537 Flock[13205:106603] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/4E9257CE-E050-4F69-A42B-5A4A24357F5B/Library/Cookies/Cookies.binarycookies
+2014-11-19 21:57:11.622 Flock[13205:106603] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-19 21:57:11.623 Flock[13205:106603] Multi-tasking -> Device: YES, App: YES
+2014-11-19 21:57:11.629 Flock[13205:106603] Unlimited access to network resources
+2014-11-19 21:57:11.631 Flock[13205:106603] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-19 21:57:11.835 Flock[13205:106603] [CDVTimer][splashscreen] 18.746018ms
+2014-11-19 21:57:11.835 Flock[13205:106603] [CDVTimer][TotalPluginStartup] 18.893003ms
+2014-11-19 21:57:11.873 Flock[13205:106603] Resetting plugins due to page load.
+2014-11-19 21:57:12.147 Flock[13205:106603] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/D4017CC1-627D-45C4-BC55-295133CDD851/Flock.app/www/index.html
+2014-11-19 21:57:16.269 Flock[13205:106603] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-19 21:57:16.540 Flock[13205:106603] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-19 23:37:21.448 Flock[19531:157106] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/29262001-5454-43B0-872C-D562D7F175B3/Library/Cookies/Cookies.binarycookies
+2014-11-19 23:37:21.658 Flock[19531:157106] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-19 23:37:21.658 Flock[19531:157106] Multi-tasking -> Device: YES, App: YES
+2014-11-19 23:37:21.664 Flock[19531:157106] Unlimited access to network resources
+2014-11-19 23:37:21.683 Flock[19531:157106] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-19 23:37:22.170 Flock[19531:157106] [CDVTimer][splashscreen] 197.013974ms
+2014-11-19 23:37:22.170 Flock[19531:157106] [CDVTimer][TotalPluginStartup] 197.223008ms
+2014-11-19 23:37:22.539 Flock[19531:157106] Resetting plugins due to page load.
+2014-11-19 23:37:22.915 Flock[19531:157106] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/DC42D106-E25D-4BF8-939A-527C7D99618A/Flock.app/www/index.html
+2014-11-19 23:43:44.076 Flock[19531:157148] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2014-11-19 23:43:44.085 Flock[19531:157106] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-19 23:43:44.487 Flock[19531:157106] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-19 23:48:30.808 Flock[20540:163511] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/0F1EE2CE-5A70-4005-926B-73593EB28D2E/Library/Cookies/Cookies.binarycookies
+2014-11-19 23:48:31.019 Flock[20540:163511] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-19 23:48:31.020 Flock[20540:163511] Multi-tasking -> Device: YES, App: YES
+2014-11-19 23:48:31.025 Flock[20540:163511] Unlimited access to network resources
+2014-11-19 23:48:31.056 Flock[20540:163511] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-19 23:48:31.476 Flock[20540:163511] [CDVTimer][splashscreen] 206.896007ms
+2014-11-19 23:48:31.476 Flock[20540:163511] [CDVTimer][TotalPluginStartup] 207.121015ms
+2014-11-19 23:48:31.873 Flock[20540:163511] Resetting plugins due to page load.
+2014-11-19 23:48:32.356 Flock[20540:163511] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/7E025554-C631-4A41-AA78-78C6187DAF19/Flock.app/www/index.html
+2014-11-19 23:48:32.405 Flock[20540:163511] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-19 23:48:33.096 Flock[20540:163511] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-19 23:51:39.534 Flock[20981:166733] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/22C8592B-736D-4D7C-A30B-4F795BC51855/Library/Cookies/Cookies.binarycookies
+2014-11-19 23:51:39.748 Flock[20981:166733] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-19 23:51:39.749 Flock[20981:166733] Multi-tasking -> Device: YES, App: YES
+2014-11-19 23:51:39.754 Flock[20981:166733] Unlimited access to network resources
+2014-11-19 23:51:39.775 Flock[20981:166733] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-19 23:51:40.172 Flock[20981:166733] [CDVTimer][splashscreen] 178.151965ms
+2014-11-19 23:51:40.173 Flock[20981:166733] [CDVTimer][TotalPluginStartup] 178.323984ms
+2014-11-19 23:51:40.480 Flock[20981:166733] Resetting plugins due to page load.
+2014-11-19 23:51:40.912 Flock[20981:166733] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/5186A868-FC5A-4A6D-A9F4-418D14F5B41D/Flock.app/www/index.html
+2014-11-19 23:51:43.265 Flock[20981:166733] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-19 23:51:44.875 Flock[20981:166733] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-19 23:53:51.369 Flock[21309:168967] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/A0CE5BCD-7A0D-4DD8-BF70-52CF9CEAD134/Library/Cookies/Cookies.binarycookies
+2014-11-19 23:53:51.480 Flock[21309:168967] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-19 23:53:51.481 Flock[21309:168967] Multi-tasking -> Device: YES, App: YES
+2014-11-19 23:53:51.488 Flock[21309:168967] Unlimited access to network resources
+2014-11-19 23:53:51.490 Flock[21309:168967] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-19 23:53:51.780 Flock[21309:168967] [CDVTimer][splashscreen] 42.378008ms
+2014-11-19 23:53:51.781 Flock[21309:168967] [CDVTimer][TotalPluginStartup] 42.526007ms
+2014-11-19 23:53:51.900 Flock[21309:168967] Resetting plugins due to page load.
+2014-11-19 23:53:52.165 Flock[21309:168967] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/3A4DDB30-6827-4FD2-9678-F9C392FCBDF3/Flock.app/www/index.html
+2014-11-19 23:53:52.206 Flock[21309:168967] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-19 23:53:53.623 Flock[21309:168967] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-19 23:54:38.133 Flock[21529:169933] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/36C26DCA-C4A6-4D92-9568-2A65A6FA70D1/Library/Cookies/Cookies.binarycookies
+2014-11-19 23:54:38.298 Flock[21529:169933] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-19 23:54:38.299 Flock[21529:169933] Multi-tasking -> Device: YES, App: YES
+2014-11-19 23:54:38.303 Flock[21529:169933] Unlimited access to network resources
+2014-11-19 23:54:38.306 Flock[21529:169933] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-19 23:54:38.625 Flock[21529:169933] [CDVTimer][splashscreen] 111.297011ms
+2014-11-19 23:54:38.625 Flock[21529:169933] [CDVTimer][TotalPluginStartup] 111.455977ms
+2014-11-19 23:54:38.819 Flock[21529:169933] Resetting plugins due to page load.
+2014-11-19 23:54:39.053 Flock[21529:169933] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/DC59D563-CCE7-4775-A305-0F3ADBA86198/Flock.app/www/index.html
+2014-11-19 23:54:39.087 Flock[21529:169933] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-19 23:54:39.945 Flock[21529:169933] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-19 23:54:41.688 Flock[21529:169933] THREAD WARNING: ['GoogleMaps'] took '27.697998' ms. Plugin should use a background thread.
+2014-11-20 09:10:08.473 Flock[23767:195969] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/398C4265-8CA9-46FB-A595-090EF5EBC8D6/Library/Cookies/Cookies.binarycookies
+2014-11-20 09:10:09.033 Flock[23767:195969] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-20 09:10:09.033 Flock[23767:195969] Multi-tasking -> Device: YES, App: YES
+2014-11-20 09:10:09.063 Flock[23767:195969] Unlimited access to network resources
+2014-11-20 09:10:09.085 Flock[23767:195969] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-20 09:10:09.939 Flock[23767:195969] [CDVTimer][splashscreen] 438.395023ms
+2014-11-20 09:10:09.939 Flock[23767:195969] [CDVTimer][TotalPluginStartup] 438.621998ms
+2014-11-20 09:10:10.415 Flock[23767:195969] Resetting plugins due to page load.
+2014-11-20 09:10:10.903 Flock[23767:195969] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/81FBFB28-D106-4BBC-AF91-6DB02D431F42/Flock.app/www/index.html
+2014-11-20 09:10:11.078 Flock[23767:195969] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-20 09:10:13.409 Flock[23767:195969] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-20 11:42:57.472 Flock[28093:230853] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/DCFF671A-882E-4EE2-9E86-F84E55F3A26E/Library/Cookies/Cookies.binarycookies
+2014-11-20 11:42:57.677 Flock[28093:230853] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-20 11:42:57.678 Flock[28093:230853] Multi-tasking -> Device: YES, App: YES
+2014-11-20 11:42:57.683 Flock[28093:230853] Unlimited access to network resources
+2014-11-20 11:42:57.704 Flock[28093:230853] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-20 11:42:58.157 Flock[28093:230853] [CDVTimer][splashscreen] 237.648010ms
+2014-11-20 11:42:58.157 Flock[28093:230853] [CDVTimer][TotalPluginStartup] 237.855971ms
+2014-11-20 11:42:58.553 Flock[28093:230853] Resetting plugins due to page load.
+2014-11-20 11:42:58.922 Flock[28093:230853] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/428566A4-1DFF-4F95-8593-81B66FD8548B/Flock.app/www/index.html
+2014-11-20 11:42:58.954 Flock[28093:230853] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-20 11:42:59.828 Flock[28093:230853] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-20 11:44:51.253 Flock[28400:232698] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/B83446F7-5D09-4361-8C4F-7432A056A211/Library/Cookies/Cookies.binarycookies
+2014-11-20 11:44:51.355 Flock[28400:232698] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-20 11:44:51.356 Flock[28400:232698] Multi-tasking -> Device: YES, App: YES
+2014-11-20 11:44:51.363 Flock[28400:232698] Unlimited access to network resources
+2014-11-20 11:44:51.367 Flock[28400:232698] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-20 11:44:51.656 Flock[28400:232698] [CDVTimer][splashscreen] 18.849969ms
+2014-11-20 11:44:51.657 Flock[28400:232698] [CDVTimer][TotalPluginStartup] 19.006014ms
+2014-11-20 11:44:51.717 Flock[28400:232698] Resetting plugins due to page load.
+2014-11-20 11:44:51.928 Flock[28400:232698] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/13FD55AC-96A9-4EE9-B24B-FAC56386E8E8/Flock.app/www/index.html
+2014-11-20 11:44:52.020 Flock[28400:232698] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-20 11:44:52.913 Flock[28400:232698] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-20 11:45:17.398 Flock[28592:233462] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/E3A912A7-9871-4114-8F50-110E00B1B060/Library/Cookies/Cookies.binarycookies
+2014-11-20 11:45:17.525 Flock[28592:233462] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-20 11:45:17.525 Flock[28592:233462] Multi-tasking -> Device: YES, App: YES
+2014-11-20 11:45:17.532 Flock[28592:233462] Unlimited access to network resources
+2014-11-20 11:45:17.536 Flock[28592:233462] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-20 11:45:17.876 Flock[28592:233462] [CDVTimer][splashscreen] 27.023017ms
+2014-11-20 11:45:17.876 Flock[28592:233462] [CDVTimer][TotalPluginStartup] 27.249992ms
+2014-11-20 11:45:17.946 Flock[28592:233462] Resetting plugins due to page load.
+2014-11-20 11:45:18.277 Flock[28592:233462] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/56BD9A2B-BAA8-48C2-921F-8A1C1D4ED54C/Flock.app/www/index.html
+2014-11-20 11:45:18.346 Flock[28592:233462] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-20 11:45:19.080 Flock[28592:233462] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-20 11:47:27.492 Flock[28912:235433] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/20657969-8A30-4E3F-86BB-8E060059853D/Library/Cookies/Cookies.binarycookies
+2014-11-20 11:47:27.625 Flock[28912:235433] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-20 11:47:27.625 Flock[28912:235433] Multi-tasking -> Device: YES, App: YES
+2014-11-20 11:47:27.632 Flock[28912:235433] Unlimited access to network resources
+2014-11-20 11:47:27.636 Flock[28912:235433] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-20 11:47:27.949 Flock[28912:235433] [CDVTimer][splashscreen] 24.955034ms
+2014-11-20 11:47:27.949 Flock[28912:235433] [CDVTimer][TotalPluginStartup] 25.274992ms
+2014-11-20 11:47:28.021 Flock[28912:235433] Resetting plugins due to page load.
+2014-11-20 11:47:28.235 Flock[28912:235433] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/6849CD30-810F-4EBC-9D38-3D76BE28464F/Flock.app/www/index.html
+2014-11-20 11:47:28.281 Flock[28912:235433] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-20 11:47:29.230 Flock[28912:235433] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-20 11:49:59.029 Flock[29262:237739] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/5EA54E1C-3B8D-44D6-A2DC-0649B570FF7D/Library/Cookies/Cookies.binarycookies
+2014-11-20 11:49:59.248 Flock[29262:237739] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-20 11:49:59.248 Flock[29262:237739] Multi-tasking -> Device: YES, App: YES
+2014-11-20 11:49:59.255 Flock[29262:237739] Unlimited access to network resources
+2014-11-20 11:49:59.258 Flock[29262:237739] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-20 11:50:00.097 Flock[29262:237739] [CDVTimer][splashscreen] 387.703001ms
+2014-11-20 11:50:00.097 Flock[29262:237739] [CDVTimer][TotalPluginStartup] 387.906015ms
+2014-11-20 11:50:00.370 Flock[29262:237739] Resetting plugins due to page load.
+2014-11-20 11:50:00.642 Flock[29262:237739] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/A1B5F149-0ACD-4CC0-9617-405EA8987464/Flock.app/www/index.html
+2014-11-20 11:50:03.690 Flock[29262:237739] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-20 11:50:05.172 Flock[29262:237739] Google Maps SDK for iOS version: 1.9.12656.0
+2014-11-20 11:51:09.918 Flock[29521:239237] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Data/Application/DB017721-6EFD-4BC8-BD9C-703BA9BC24F5/Library/Cookies/Cookies.binarycookies
+2014-11-20 11:51:10.012 Flock[29521:239237] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-20 11:51:10.013 Flock[29521:239237] Multi-tasking -> Device: YES, App: YES
+2014-11-20 11:51:10.020 Flock[29521:239237] Unlimited access to network resources
+2014-11-20 11:51:10.023 Flock[29521:239237] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-20 11:51:10.250 Flock[29521:239237] [CDVTimer][splashscreen] 16.327977ms
+2014-11-20 11:51:10.251 Flock[29521:239237] [CDVTimer][TotalPluginStartup] 16.474962ms
+2014-11-20 11:51:10.299 Flock[29521:239237] Resetting plugins due to page load.
+2014-11-20 11:51:10.474 Flock[29521:239237] Finished load of: file:///Users/tino/Library/Developer/CoreSimulator/Devices/D7BF5969-BBA2-47CA-AE41-692A80A69726/data/Containers/Bundle/Application/561BD208-E405-4F02-879D-ABC1FF98F8A3/Flock.app/www/index.html
+2014-11-20 11:51:18.179 Flock[29521:239237] This app uses phonegap-googlemaps-plugin version 1.2.4
+2014-11-20 11:51:19.040 Flock[29521:239237] Google Maps SDK for iOS version: 1.9.12656.0
