@@ -26,6 +26,7 @@ module.exports.metadata =
 // TOP OF METADATA
 {
     "org.apache.cordova.splashscreen": "0.3.4",
+    "org.apache.cordova.geolocation": "0.3.10",
     "plugin.google.maps": "1.2.4",
     "plugin.http.request": "1.0.0",
     "com.google.playservices": "21.0.0",
