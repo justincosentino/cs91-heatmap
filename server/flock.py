@@ -14,9 +14,10 @@ Start application and connect to database
 
 """
 
-client = MongoClient('localhost', 27017)
 app = Flask(__name__)
 app.debug = True
+
+client = MongoClient('localhost', 27017)
 db = client.test_database
 
 """
@@ -25,10 +26,22 @@ Globals
 
 """
 
-LOCATION_FIELDS = ['lat', 'long', 'time']
-#LOCATION_FIELDS = ['lat', 'long', 'time', 'uid']
-USER_FIELDS = ['uid']
-TIME_DELAY = 900 # 15 mins
+MAX_LAT = 39.910812
+MIN_LAT = 39.897306
+MIN_LONG = -75.358191
+MAX_LONG = -75.345037
+
+LATITUDE = 'lat'
+LONGITUDE = 'long'
+USER_ID = 'uid'
+TIME = 'time'
+SALT = 'salt'
+HASH = 'hash'
+
+LOCATION_FIELDS = [LATITUDE, LONGITUDE, TIME]
+#LOCATION_FIELDS = [LATITUDE, LONGITUDE, TIME, USER_ID]
+USER_FIELDS = [USER_ID]
+TIME_DELAY = 360000 # 15 mins
 
 """
 
@@ -42,8 +55,8 @@ def getLocation():
     locations = db.locations
     str_locs = []
     for location in locations.find():
-        if "time" in location:
-            if int(location["time"]) > time() - TIME_DELAY:
+        if TIME in location:
+            if int(location[TIME]) > time() - TIME_DELAY:
                 str_locs.append(location)
     return json.dumps(str_locs, default=json_util.default)
 
@@ -51,9 +64,13 @@ def getLocation():
 @app.route("/postLocation")
 def postLocation():
     location = getFieldsOr400(request, LOCATION_FIELDS)
-    if type(location) == tuple: return location
-    db.locations.insert(location)
-    return "Success" , str(location)
+    if not location: return "Bad Request", 400
+
+    if locationInRange(location):
+        db.locations.insert(location)
+        return "Success" , str(location)
+    else:
+        return "Location out of range"
 
 # Registers a new uid to the database
 @app.route("/registerUser")
@@ -61,9 +78,9 @@ def registerUser():
     user = getFieldsOr400(request, USER_FIELDS)
 
     # bad request
-    if type(user) == tuple: return user
+    if not user: return "Bad Request", 400
 
-    existing = db.users.find_one({'uid': user['uid']})
+    existing = db.users.find_one({USER_ID: user[USER_ID]})
     if existing:
         return "User already exists"
 
@@ -99,7 +116,7 @@ def verifyHash(request):
     h = hmac.new(b'1234567890', msg, sha1)
     hash = base64.b64encode(h.digest())
         
-    return hash == request.args['hash'] and salt == request.args['salt']
+    return hash == request.args[HASH] and salt == request.args[SALT]
 
 # Ensures that all the required <fields> are in a supplied <request>
 # Returns a dict with fields or an error response
@@ -108,9 +125,17 @@ def getFieldsOr400(request, fields):
     for field in fields:
         val = request.args.get(field)
         if not val:
-            return "Bad request", 400
+            return False
         obj[field] = val
     return obj
+
+# Checks whether a given location dict is in Swarthmore's range
+def locationInRange(location):
+    return float(location[LATITUDE]) >= MIN_LAT and \
+            float(location[LATITUDE]) <= MAX_LAT and \
+            float(location[LONGITUDE]) >= MIN_LONG and \
+            float(location[LONGITUDE]) <= MAX_LONG
+
     
 if __name__ == "__main__":
     app.run()
