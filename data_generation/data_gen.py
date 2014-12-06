@@ -1,6 +1,6 @@
 from graphics import *
 
-NUM_LOCATIONS = 150
+NUM_LOCATIONS = 1500
 FRAME_WIDTH = 911
 FRAME_HEIGHT = 1447
 IMG_WIDTH = 600
@@ -22,8 +22,6 @@ i.draw(win)
 print i.getWidth(), i.getHeight()
 
 f = open('locations.txt', 'w')
-p = Point(50, 60)
-p.draw(win)
 
 num = NUM_LOCATIONS
 locations = []
@@ -34,7 +32,7 @@ while num != 0:
 	longitude = MIN_LONG + (float(d.getX())/float(IMG_WIDTH))*(MAX_LONG - MIN_LONG)
 	location = (latitude, longitude)
 
-	f.write(str(d.getX()) + ' ' + str(d.getY()) + '\n')
+	f.write(str(latitude) + ' ' + str(longitude) + '\n')
 	
 	print len(locations), location
 	locations.append(location)
