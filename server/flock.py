@@ -3,6 +3,7 @@ from pymongo import MongoClient
 from bson import BSON, json_util
 from time import time
 from hashlib import sha1, md5
+from sklearn import cluster
 import json
 import hmac
 import base64
@@ -41,7 +42,7 @@ HASH = 'hash'
 LOCATION_FIELDS = [LATITUDE, LONGITUDE, TIME]
 #LOCATION_FIELDS = [LATITUDE, LONGITUDE, TIME, USER_ID]
 USER_FIELDS = [USER_ID]
-TIME_DELAY = 360000 # 15 mins
+TIME_DELAY = 36000000 # 15 mins
 
 """
 
@@ -91,7 +92,10 @@ def registerUser():
 # Returns clustering information
 @app.route("/getClusters")
 def getClusters():
-    pass
+    locations = db.locations
+    print locations
+    return json.dumps(locations, default=json_util.default)
+
 
 
 """
