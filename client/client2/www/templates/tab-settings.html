@@ -5,7 +5,7 @@
 	  <li class="item item-toggle">
 	     Location Services
 	     <label class="toggle">
-	       <input type="checkbox" ng-model="locationServices">
+	       <input type="checkbox" ng-model="data.locationServices" ng-change="updateLocationServices()">
 	       <div class="track">
 	         <div class="handle"></div>
 	       </div>
@@ -13,9 +13,11 @@
 	  </li>
 
  	  <li class="item range range-positive">
-    	<i class="icon ion-ios7-sunny"></i>
-    	<input type="range" name="volume" min="0" max="100" ng-model="fuzzingValue">
-    	<i class="ion-ios7-cloudy"></i>
+    	<!--<i class="icon ion-ios7-sunny"></i>-->
+    	Less
+    	<input type="range" name="fuzzingValue" min="0" max="100" ng-model="data.fuzzingValue" ng-change="updateFuzzing()">
+    	<!--<i class="ion-ios7-cloudy"></i>-->
+    	More
   	  </li>
 
 	</ul>

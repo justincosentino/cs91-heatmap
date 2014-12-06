@@ -1,6 +1,7 @@
 angular.module('starter.services', [])
 
 .factory('$appSettings', function() {
+
   appState = window.localStorage.getItem("appState");
   appState = JSON.parse(appState);
   if (appState == null) {
@@ -13,38 +14,42 @@ angular.module('starter.services', [])
     }
     window.localStorage.setItem("appState", JSON.stringify(appState));
   }
-  return appState;
-})
+  appStateRet = {
+    serverUrl: appState.serverUrl,
+    deviceId: appState.deviceId,
 
-.factory("$map", function() {
-  const SWARTHMORE = new plugin.google.maps.LatLng(39.90652,-75.35199);
+    getLocationServices : function () {
+      return appState.locationServices;
+    },
 
-  var map = plugin.google.maps.Map.getMap({
-    'backgroundColor': 'white',
-    'mapType': plugin.google.maps.MapTypeId.ROADMAP,
-    'controls': {
-      'compass': true,
-      'myLocationButton': false,
-      'indoorPicker': false,
-      'zoom': true
+    toggleLocationServices : function() {
+      appState.locationServices = !appState.locationServices;
+      window.localStorage.setItem("appState", JSON.stringify(appState));
+      return appState.locationServices;
     },
-    'gestures': {
-      'scroll': true,
-      'tilt': false,
-      'rotate': false
+
+    getFuzzingValue : function () {
+      return appState.fuzzingValue;
     },
-    'camera': {
-      'latLng': SWARTHMORE,
-      'tilt': 0,
-      'zoom': 15,
-      'bearing': 0
+
+    setFuzzingValue : function(value) {
+      appState.fuzzingValue = value;
+      console.log("APP STATE, " + JSON.stringify(appState) + " " + value);
+      window.localStorage.setItem("appState", JSON.stringify(appState));
+      return appState.fuzzingValue;
+    },
+
+    getTimeLastSubmit : function () {
+      return appState.timeLastSubmit;
+    },
+
+    setTimeLastSubmit : function(value){
+      appState.timeLastSubmit = value;
+      window.localStorage.setItem("appState", JSON.stringify(appState));
+      return appState.timeLastSubmit;
     }
-  });
+  };
 
-  var strictBounds = new plugin.google.maps.LatLngBounds(
-   new plugin.google.maps.LatLng(39.910812, -75.358191), 
-   new plugin.google.maps.LatLng(39.897306, -75.345037)
-  );
 
-  var evtName = plugin.google.maps.event.dragend;
+  return appStateRet;
 });
