@@ -2,6 +2,8 @@ angular.module('starter.controllers', ['ionic'])
 
 .controller('MapCtrl', function($ionicPlatform, $scope, $appSettings, $http) {
 
+	$scope.toShow = $appSettings.getLocationServices();
+
 	$ionicPlatform.ready(function() {
 
 		const SWARTHMORE = new plugin.google.maps.LatLng(39.90652,-75.35199);

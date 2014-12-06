@@ -3,6 +3,7 @@
       <button class="button button-icon icon ion-ios7-loop-strong" ng-click="refresh()"></button>
     </ion-nav-buttons>
 	<ion-content scroll="false" padding="true" data-tap-disabled="true">
-		<div style="width:100%;height:100%; background-color: #e9e9e9;" id="map_canvas"></div>
+		<div ng-if="toShow" style="width:100%;height:100%; background-color: #e9e9e9;" id="map_canvas"></div>
+		<div ng-if="!toShow">You must enable location services in order to view the map.</div>
   	</ion-content>
 </ion-view>
