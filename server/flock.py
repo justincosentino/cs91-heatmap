@@ -69,7 +69,7 @@ def postLocation():
 
     if locationInRange(location):
         db.locations.insert(location)
-        return "Success" , str(location)
+        return str(location), 200
     else:
         return "Location out of range"
 
