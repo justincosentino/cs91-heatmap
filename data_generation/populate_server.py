@@ -18,7 +18,7 @@ t = str(int(time.time()))
 for location in locations:
 	try:
 		urllib2.urlopen("http://localhost:5000/postLocation?lat="\
-			+lat+"&long="+long+"&time="+t)
+			+location[0]+"&long="+location[1]+"&time="+t)
 	except BadStatusLine:
 		print "could not fetch", url
     	pass

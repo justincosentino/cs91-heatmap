@@ -1,14 +1,15 @@
 <ion-view title="Flock">	
 	<ion-nav-buttons side="right">
       <button class="button button-icon icon ion-ios7-loop-strong" ng-click="refresh()"></button>
+      <button class="button button-icon icon ion-ios-navigate-outline" ng-click="findMe()"></button>
     </ion-nav-buttons>
-	<ion-content scroll="false" padding="true" data-tap-disabled="true">
+	<ion-content ng-show="toShow" scroll="false" padding="true" data-tap-disabled="true">
 		<div ng-show="toShow" style="width:100%;height:100%; background-color: #e9e9e9;" id="map_canvas" ng-cloak></div>
-		<div ng-show="!toShow" style="width:100%;height:100%; background-color: #e9e9e9; padding: 200 0 0 0;" ng-cloak>
+  	</ion-content>
+	<ion-content ng-show="!toShow" scroll="false" padding="false" data-tap-disabled="true">
+		<div style="width:100%;height:100%; background-color: #fff; padding: 200px 20px 0 20px;" ng-cloak>
 			<h3 ng-cloak style="text-align: center;">You must enable location services in order to view the map.</h3>
+			<!-- <i id="ion-ios-location" class="icon ion-ios-location"></i> -->
 		</div>
-
-		
-
   	</ion-content>
 </ion-view>

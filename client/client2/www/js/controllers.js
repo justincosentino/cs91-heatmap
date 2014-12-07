@@ -1,60 +1,88 @@
 angular.module('starter.controllers', ['ionic'])
-
 .controller('MapCtrl', function($ionicPlatform, $scope, $appSettings, $http) {
 
 	$scope.toShow = $appSettings.getLocationServices();
 
 	$ionicPlatform.ready(function() {
 
+		if ($appSettings.getDeviceId == "UNKOWN") {
+			$appSettings.setDeviceId(device.uuid);
+		}
+
 		const SWARTHMORE = new plugin.google.maps.LatLng(39.90652,-75.35199);
 		
 		var div = document.getElementById("map_canvas");
 
 		map = plugin.google.maps.Map.getMap({
-		  'backgroundColor': 'white',
-		  'mapType': plugin.google.maps.MapTypeId.ROADMAP,
-		  'controls': {
-		    'compass': true,
-		    'myLocationButton': false,
-		    'indoorPicker': false,
-		    'zoom': true
-		  },
-		  'gestures': {
-		    'scroll': true,
-		    'tilt': false,
-		    'rotate': false
-		  },
-		  'camera': {
-		    'latLng': SWARTHMORE,
-		    'tilt': 0,
-		    'zoom': 15,
-		    'bearing': 0
-		  }
+		  	'backgroundColor': 'white',
+		  	'mapType': plugin.google.maps.MapTypeId.ROADMAP,
+		  	'controls': {
+		    	'compass': true,
+			    'myLocationButton': false,
+			    'indoorPicker': false,
+			    'zoom': true
+		  	},
+		  	'gestures': {
+			    'scroll': true,
+			    'tilt': false,
+			    'rotate': false
+		  	},
+		  	'camera': {
+			    'latLng': SWARTHMORE,
+			    'tilt': 0,
+			    'zoom': 17,
+			    'bearing': 0
+		  	}
 		});
 
 		map.setDiv(div);
 
+		$scope.findMe = function() {
+			var onFindMeSuccess = function(location) {
+				map.addMarker({
+			    	'position': location.latLng,
+			  	}, function(marker) {
+			  		
+			  	});
+			};
+
+			var onFindMeError = function(msg) {
+			  	alert("Whoops, something went wrong when trying to get your location. Please try again.");
+			  	console.log(msg);
+			};
+
+			map.getMyLocation(onFindMeSuccess, onFideMeError);
+		}
+
 		$scope.refresh = function() {
 			$http.get($appSettings.serverUrl + '/getLocations').
-			  success(function(data, status, headers, config) {
-			  	for (var i = 0; i < data.length; i++) {
+			  	success(function(data, status, headers, config) {
 
-			  		var point = new plugin.google.maps.LatLng(parseFloat(data[i].lat), parseFloat(data[i].long));
+			  		// console.log(data);
+
+			  		map.clear();
+
+			  		// $scope.findMe();
+
+			  		for (var i = 0; i < data.length; i++) {
+
+			  			var point = new plugin.google.maps.LatLng(parseFloat(data[i].lat), parseFloat(data[i].long));
       
-			  		map.addCircle({
-					  'center': point,
-					  'radius': 10,
-					  strokeColor: "rgba(215, 44, 44, 0)",
-				      strokeWeight: 1,
-				      fillColor: "rgba(215, 44, 44, 0.2)"
-					});
-
-			  	}
-			  }).
-			  error(function(data, status, headers, config) {
-			  	alert("Whoops, something went wrong. Please try again.")
-			  });		
-		}
+				  		map.addCircle({
+						  	'center': point,
+						  	'radius': 10,
+						  	strokeColor: "rgba(95, 158, 245, 0)",
+					      	strokeWeight: 1,
+					      	fillColor: "rgba(95, 158, 245, 0.2)"
+						}, function(circle) {
+							
+						});
+			  		}
+			  	}).
+			  	error(function(data, status, headers, config) {
+			  		alert("Whoops, something went wrong when fetching location data. Please try again.");
+			  	});		
+		};
 
 		$scope.refresh();
 
@@ -65,29 +93,50 @@ angular.module('starter.controllers', ['ionic'])
 		//  new plugin.google.maps.LatLng(39.897306, -75.345037)
 		// );
 
-		// var onSuccess = function(position) {
-		//     console.log('Latitude: '          + position.coords.latitude          + '\n' +
-		//           'Longitude: '         + position.coords.longitude         + '\n' +
-		//           'Altitude: '          + position.coords.altitude          + '\n' +
-		//           'Accuracy: '          + position.coords.accuracy          + '\n' +
-		//           'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-		//           'Heading: '           + position.coords.heading           + '\n' +
-		//           'Speed: '             + position.coords.speed             + '\n' +
-		//           'Timestamp: '         + position.timestamp                + '\n');
-		// }
+		window.navigator.geolocation.getCurrentPosition(function(location) {
+        	console.log('Preliminary Location from Cordova');
+    	});
 
-		// function onError(error) {
-		// 	console.log('code: '    + error.code    + '\n' +
-		//           		'message: ' + error.message + '\n');
-		// }
+   	 	var bgGeo = window.plugins.backgroundGeoLocation;
 
-		// var options = {timeout: 5000, enableHighAccuracy: false};
-		
-		// var watchId = navigator.geolocation.watchPosition(onSuccess,
-	 	//                                      onError,
-	 	//                                      options);
+	    var updateAppState = function(response) {
+	    	// UPDATE LAST SENT HERE
+	        bgGeo.finish();
+	    };
 
-	});  
+	    var callbackFn = function(location) {
+
+	        console.log('[js] BackgroundGeoLocation callback:  ' + location.latitude + ',' + location.longitude);
+	        // console.log(JSON.stringify(location));
+	        
+	        // Do your HTTP request here to POST location to your server.
+	        // CHECK UUID and LAST SENT HERE
+
+	        updateAppState.call(this);
+
+	    };
+
+	    var failureFn = function(error) {
+	        console.log('BackgroundGeoLocation error');
+	    };
+
+	    bgGeo.configure(callbackFn, failureFn, {
+	        url: $appSettings.serverUrl + '/postLocation',
+	        params: {},
+	        headers: {},
+	        desiredAccuracy: 10,
+	        stationaryRadius: 20,
+	        distanceFilter: 30,
+	        notificationTitle: 'Background tracking', 
+	        notificationText: 'ENABLED',
+	        activityType: 'Other',
+	        debug: false, 
+	        stopOnTerminate: false 
+	    });
+
+	    bgGeo.start();
+	});
+
 })
 
 .controller('SettingsCtrl', function($scope, $appSettings) {
