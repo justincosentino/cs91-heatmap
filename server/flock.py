@@ -3,7 +3,7 @@ from pymongo import MongoClient
 from bson import BSON, json_util
 from time import time
 from hashlib import sha1, md5
-from sklearn import cluster
+#from sklearn import cluster
 import json
 import hmac
 import base64
