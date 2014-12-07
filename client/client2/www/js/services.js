@@ -1,19 +1,21 @@
-angular.module('starter.services', [])
+angular.module('starter.services', ['ionic'])
 
-.factory('$appSettings', function() {
+.factory('$appSettings', function($ionicPlatform) {
 
   appState = window.localStorage.getItem("appState");
   appState = JSON.parse(appState);
+  
   if (appState == null) {
     appState = {
       serverUrl: "http://localhost:5000",
-      deviceId: 1,
+      deviceId: "UNKOWN",
       locationServices: true,
       fuzzingValue: 0,
       timeLastSubmit: 0
     }
     window.localStorage.setItem("appState", JSON.stringify(appState));
   }
+
   appStateRet = {
     serverUrl: appState.serverUrl,
     deviceId: appState.deviceId,
@@ -34,7 +36,6 @@ angular.module('starter.services', [])
 
     setFuzzingValue : function(value) {
       appState.fuzzingValue = value;
-      console.log("APP STATE, " + JSON.stringify(appState) + " " + value);
       window.localStorage.setItem("appState", JSON.stringify(appState));
       return appState.fuzzingValue;
     },
@@ -47,9 +48,20 @@ angular.module('starter.services', [])
       appState.timeLastSubmit = value;
       window.localStorage.setItem("appState", JSON.stringify(appState));
       return appState.timeLastSubmit;
+    },
+
+    getDeviceId : function () {
+      return appState.deviceId;
+    },
+
+    setDeviceId: function(id) {
+      appState.deviceId = id;
+      window.localStorage.setItem("appState", JSON.stringify(appState));
+      return appState.setDeviceId;
     }
+
   };
 
-
   return appStateRet;
+
 });
