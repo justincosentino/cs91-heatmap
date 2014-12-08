@@ -38,20 +38,24 @@ angular.module('starter.controllers', ['ionic'])
 		map.setDiv(div);
 
 		$scope.findMe = function() {
-			var onFindMeSuccess = function(location) {
+
+			var onFindMeSuccess = function(position) {
+			    current = new plugin.google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 				map.addMarker({
-			    	'position': location.latLng,
+			    	'position': current,
 			  	}, function(marker) {
 			  		
 			  	});
 			};
 
-			var onFindMeError = function(msg) {
-			  	alert("Whoops, something went wrong when trying to get your location. Please try again.");
-			  	console.log(msg);
-			};
 
-			map.getMyLocation(onFindMeSuccess, onFideMeError);
+			function onFindMeError(error) {
+			  	alert("Whoops, something went wrong when trying to get your location. Please try again.");
+			    console.log('code: '    + error.code    + '\n' +
+			          		'message: ' + error.message + '\n');
+			}
+
+			navigator.geolocation.getCurrentPosition(onFindMeSuccess, onFindMeError);
 		}
 
 		$scope.refresh = function() {
@@ -62,7 +66,7 @@ angular.module('starter.controllers', ['ionic'])
 
 			  		map.clear();
 
-			  		// $scope.findMe();
+			  		$scope.findMe();
 
 			  		for (var i = 0; i < data.length; i++) {
 
@@ -100,17 +104,38 @@ angular.module('starter.controllers', ['ionic'])
    	 	var bgGeo = window.plugins.backgroundGeoLocation;
 
 	    var updateAppState = function(response) {
-	    	// UPDATE LAST SENT HERE
 	        bgGeo.finish();
 	    };
 
 	    var callbackFn = function(location) {
-
-	        console.log('[js] BackgroundGeoLocation callback:  ' + location.latitude + ',' + location.longitude);
-	        // console.log(JSON.stringify(location));
 	        
 	        // Do your HTTP request here to POST location to your server.
 	        // CHECK UUID and LAST SENT HERE
+	        if ($appSettings.getDeviceId != "UNKOWN") {
+	        	
+	        	// Also check timestamp	
+
+	        	var timestamp = new Date().getTime()
+
+		        $http.get($appSettings.serverUrl + '/postLocation?lat=' + location.latitude + 
+		        											   '&long=' + location.longitude +
+		        											   '&time=' + timestamp
+		        ).
+			  	success(function(data, status, headers, config) {
+					console.log("-----> get success");
+					console.log(data);
+					$appSettings.setTimeLastSubmit(timestamp)
+				}).
+				error(function(data, status, headers, config) {
+					console.log("-----> get error");
+					console.log(data);
+				});
+
+	        	// Update timestamp on success
+
+	        } else {
+	        	console.log("Did not send POST: Invalid UUID");
+	        }
 
 	        updateAppState.call(this);
 
@@ -121,7 +146,8 @@ angular.module('starter.controllers', ['ionic'])
 	    };
 
 	    bgGeo.configure(callbackFn, failureFn, {
-	        url: $appSettings.serverUrl + '/postLocation',
+	        //url: $appSettings.serverUrl + '/postLocation',
+	        url: '',
 	        params: {},
 	        headers: {},
 	        desiredAccuracy: 10,
