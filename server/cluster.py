@@ -1,7 +1,4 @@
-print(__doc__)
-
 import numpy as np
-
 from time import time
 from sklearn.cluster import DBSCAN, AffinityPropagation, estimate_bandwidth, MeanShift
 from sklearn import metrics
@@ -14,7 +11,7 @@ from itertools import cycle, combinations
 import math
 
 PLOT = False
-POPULATION_THRESHOLD = 1
+POPULATION_THRESHOLD = 10
 CENTER = 'center'
 POPULATION = 'population'
 RADIUS = 'radius'
@@ -51,7 +48,7 @@ def processClusterData():
             d['center'] = findCenter(d)
             if -1 in clusters: del clusters[-1]
         elif CLUSTER_ALG == MEAN_SHIFT:
-            if d['population'] < POPULATION_THRESHOLD:
+            if int(d['population']) < POPULATION_THRESHOLD:
                 del clusters[cluster]
                 continue
             center = list(cluster_centers[cluster])

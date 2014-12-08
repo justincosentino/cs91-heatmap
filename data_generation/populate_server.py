@@ -2,6 +2,12 @@ import sys
 import urllib2
 import time
 from httplib import BadStatusLine
+from pymongo import MongoClient
+
+client = MongoClient('localhost', 27017)
+db = client.test_database
+
+db.drop_collection('locations')
 
 filename = sys.argv[1]
 
