@@ -62,8 +62,6 @@ angular.module('starter.controllers', ['ionic'])
 			$http.get($appSettings.serverUrl + '/getLocations').
 			  	success(function(data, status, headers, config) {
 
-			  		// console.log(data);
-
 			  		map.clear();
 
 			  		$scope.findMe();
@@ -90,8 +88,8 @@ angular.module('starter.controllers', ['ionic'])
 
 		$scope.refresh();
 
+		// UPDATING SCROLL BOUNDS WOULD GO HERE IF I KNEW HOW TO DO IT
 		// map.on(plugin.google.maps.event.MARKER_DRAG_END, onDragEnd);
-
 		// var strictBounds = new plugin.google.maps.LatLngBounds(
 		//  new plugin.google.maps.LatLng(39.910812, -75.358191), 
 		//  new plugin.google.maps.LatLng(39.897306, -75.345037)
@@ -108,34 +106,32 @@ angular.module('starter.controllers', ['ionic'])
 	    };
 
 	    var callbackFn = function(location) {
+			
+			timestamp = new Date().getTime();
 	        
-	        // Do your HTTP request here to POST location to your server.
-	        // CHECK UUID and LAST SENT HERE
-	        if ($appSettings.getDeviceId != "UNKOWN") {
-	        	
-	        	// Also check timestamp	
-
-	        	var timestamp = new Date().getTime()
-
+	        // Only update the position if we have a valid UUID, if the user has enabled location tracking,
+	        // and if the user has not submitted in the last 15 minutes
+	        if ($appSettings.getDeviceId != "UNKOWN" && 
+	        	$appSettings.locationServices &&
+	        	timestamp - $appSettings.setTimeLastSubmit > 900000) {
+	        
 		        $http.get($appSettings.serverUrl + '/postLocation?lat=' + location.latitude + 
 		        											   '&long=' + location.longitude +
 		        											   '&time=' + timestamp
 		        ).
 			  	success(function(data, status, headers, config) {
-					console.log("-----> get success");
+					console.log("/postLocation SUCCESS");
 					console.log(data);
-					$appSettings.setTimeLastSubmit(timestamp)
+					$appSettings.setTimeLastSubmit(timestamp);
 				}).
 				error(function(data, status, headers, config) {
-					console.log("-----> get error");
+					console.log("/postLocation ERROR");
 					console.log(data);
 				});
 
-	        	// Update timestamp on success
-
 	        } else {
-	        	console.log("Did not send POST: Invalid UUID");
-	        }
+	        	console.log("Did not send POST: Invalid UUID, too soon, or location services turned off");
+	        }	
 
 	        updateAppState.call(this);
 
