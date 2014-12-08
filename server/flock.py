@@ -98,6 +98,7 @@ def registerUser():
 # Returns clustering information
 @app.route("/getClusters")
 def getClusters():
+    # db.drop_collection("locations")
     clusters = cluster.clusterData()
     return json.dumps(clusters, default=json_util.default)
 

@@ -56,7 +56,7 @@ def processClusterData():
                 continue
             d['center'] = list(cluster_centers[labels[cluster]])
         
-        d['radius'] = maxDistance(d['data'])
+        d['radius'] = meanDistance(d['data'])
         del d['data']
 
     return clusters
@@ -138,6 +138,16 @@ def maxDistance(lst):
     for p0, p1 in combinations(lst, 2):
         max_dist = max(max_dist, distance(p0, p1))
     return max_dist
+
+def meanDistance(lst):
+    total = distance(lst[0], lst[1])
+    for p0, p1 in combinations(lst, 2):
+        total += distance(p0, p1)
+
+    n = len(lst)
+    r = 2
+    mean = total*1.0 / (math.factorial(n)/(math.factorial(r)*math.factorial(n-r)))
+    return mean
 
 def findCenter(d):
     long = [location[0] for location in d['data']]

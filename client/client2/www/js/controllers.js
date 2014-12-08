@@ -9,7 +9,7 @@ angular.module('starter.controllers', ['ionic'])
 			$appSettings.setDeviceId(device.uuid);
 		}
 
-		const SWARTHMORE = new plugin.google.maps.LatLng(39.90652,-75.35199);
+		const SWARTHMORE = new plugin.google.maps.LatLng(39.905174, -75.354227);
 		
 		var div = document.getElementById("map_canvas");
 
@@ -30,7 +30,7 @@ angular.module('starter.controllers', ['ionic'])
 		  	'camera': {
 			    'latLng': SWARTHMORE,
 			    'tilt': 0,
-			    'zoom': 17,
+			    'zoom': 16,
 			    'bearing': 0
 		  	}
 		});
@@ -48,7 +48,6 @@ angular.module('starter.controllers', ['ionic'])
 			  	});
 			};
 
-
 			function onFindMeError(error) {
 			  	alert("Whoops, something went wrong when trying to get your location. Please try again.");
 			    console.log('code: '    + error.code    + '\n' +
@@ -56,26 +55,42 @@ angular.module('starter.controllers', ['ionic'])
 			}
 
 			navigator.geolocation.getCurrentPosition(onFindMeSuccess, onFindMeError);
-		}
+		};
 
 		$scope.refresh = function() {
-			$http.get($appSettings.serverUrl + '/getLocations').
+			$http.get($appSettings.serverUrl + '/getClusters').
 			  	success(function(data, status, headers, config) {
 
 			  		map.clear();
 
-			  		$scope.findMe();
+			  		// $scope.findMe();
+
+			  		var maxPopulation = 0;
+
+			  		// var colors = ["rgba(241,238,246,.6)","rgba(189,201,225,.6)","rgba(116,169,207,.6)","rgba(43,140,190,.6)","rgba(4,90,141,.6)"];
+			  		var colors = ["rgba(255,255,178,.6)","rgba(254,217,118,.6)","rgba(254,178,76,.6)","rgba(253,141,60,.6)","rgba(240,59,32,.6)","rgba(34,94,168,.6)","rgba(189,0,38,.6)"];
+
+			  		for (var i = 0; i < data.length; i++) {
+			  			if (data[i].population >= maxPopulation) {
+			  				maxPopulation = data[i].population;
+			  			}
+			  		}
+
+			  		console.log("MAX POPULATION: " + maxPopulation);
 
 			  		for (var i = 0; i < data.length; i++) {
 
-			  			var point = new plugin.google.maps.LatLng(parseFloat(data[i].lat), parseFloat(data[i].long));
-      
+			  			var point = new plugin.google.maps.LatLng(parseFloat(data[i].center[0]), parseFloat(data[i].center[1]));
+      					
+			  			var percentage = data[i].population*1.0/maxPopulation;
+			  			var colorIndex = Math.ceil(percentage * colors.length) - 1;
+
 				  		map.addCircle({
 						  	'center': point,
-						  	'radius': 10,
-						  	strokeColor: "rgba(95, 158, 245, 0)",
+						  	'radius': 111319.892222*data[i].radius,
+						  	strokeColor: colors[colorIndex],
 					      	strokeWeight: 1,
-					      	fillColor: "rgba(95, 158, 245, 0.2)"
+					      	fillColor: colors[colorIndex]
 						}, function(circle) {
 							
 						});

@@ -6,12 +6,14 @@ angular.module('starter.services', ['ionic'])
   appState = JSON.parse(appState);
   
   if (appState == null) {
+    var newTime = new Date().getTime() - 900001;
+    console.log(newTime)
     appState = {
       serverUrl: "http://localhost:5000",
       deviceId: "UNKOWN",
       locationServices: true,
       fuzzingValue: 0,
-      timeLastSubmit: new Date.getTime() - 900000
+      timeLastSubmit: newTime
     }
     window.localStorage.setItem("appState", JSON.stringify(appState));
   }
