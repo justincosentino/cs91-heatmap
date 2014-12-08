@@ -44,7 +44,6 @@ def processClusterData():
         existing['data'].append(list(raw_locations[i]))
         clusters[labels[i]] = existing
 
-    toDel = []
     for cluster, d in clusters.items():
         d['population'] = len(d['data'])
     
@@ -53,7 +52,7 @@ def processClusterData():
             if -1 in clusters: del clusters[-1]
         elif CLUSTER_ALG == MEAN_SHIFT:
             if d['population'] < POPULATION_THRESHOLD:
-                toDel.append(clusters[cluster])
+                del clusters[cluster]
                 continue
             center = list(cluster_centers[cluster])
             center.reverse()
@@ -61,9 +60,6 @@ def processClusterData():
         
         d['radius'] = meanDistance(d['data'])
         del d['data']
-
-    for item in toDel:
-        del clusters[item]
 
     return clusters
 
