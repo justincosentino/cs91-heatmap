@@ -88,8 +88,8 @@ angular.module('starter.controllers', ['ionic'])
 				  		map.addCircle({
 						  	'center': point,
 						  	'radius': 111319.892222*data[i].radius,
-						  	strokeColor: colors[colorIndex],
-					      	strokeWeight: 1,
+						  	strokeColor: "rgba(255,255,255,.0)",
+					      	strokeWeight: 0.0,
 					      	fillColor: colors[colorIndex]
 						}, function(circle) {
 							
