@@ -16,3 +16,4 @@ platforms/ios/cordova/console.log
 
 # Python
 server/*.pyc
+data_generation/*.pyc
