@@ -74,9 +74,10 @@ def postLocation():
 
     if locationInRange(location):
         db.locations.insert(location)
-        return str(location), 200
+        del location["_id"]
+        return json.dumps(location), 200
     else:
-        return "Location out of range"
+        return "Location out of range", 400
 
 # Registers a new uid to the database
 @app.route("/registerUser")

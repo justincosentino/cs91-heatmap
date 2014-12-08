@@ -38,31 +38,33 @@ angular.module('starter.controllers', ['ionic'])
 		map.setDiv(div);
 
 		$scope.findMe = function() {
-			var onFindMeSuccess = function(location) {
+
+			var onFindMeSuccess = function(position) {
+			    current = new plugin.google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 				map.addMarker({
-			    	'position': location.latLng,
+			    	'position': current,
 			  	}, function(marker) {
 			  		
 			  	});
 			};
 
-			var onFindMeError = function(msg) {
-			  	alert("Whoops, something went wrong when trying to get your location. Please try again.");
-			  	console.log(msg);
-			};
 
-			map.getMyLocation(onFindMeSuccess, onFideMeError);
+			function onFindMeError(error) {
+			  	alert("Whoops, something went wrong when trying to get your location. Please try again.");
+			    console.log('code: '    + error.code    + '\n' +
+			          		'message: ' + error.message + '\n');
+			}
+
+			navigator.geolocation.getCurrentPosition(onFindMeSuccess, onFindMeError);
 		}
 
 		$scope.refresh = function() {
 			$http.get($appSettings.serverUrl + '/getLocations').
 			  	success(function(data, status, headers, config) {
 
-			  		// console.log(data);
-
 			  		map.clear();
 
-			  		// $scope.findMe();
+			  		$scope.findMe();
 
 			  		for (var i = 0; i < data.length; i++) {
 
@@ -86,8 +88,8 @@ angular.module('starter.controllers', ['ionic'])
 
 		$scope.refresh();
 
+		// UPDATING SCROLL BOUNDS WOULD GO HERE IF I KNEW HOW TO DO IT
 		// map.on(plugin.google.maps.event.MARKER_DRAG_END, onDragEnd);
-
 		// var strictBounds = new plugin.google.maps.LatLngBounds(
 		//  new plugin.google.maps.LatLng(39.910812, -75.358191), 
 		//  new plugin.google.maps.LatLng(39.897306, -75.345037)
@@ -100,17 +102,36 @@ angular.module('starter.controllers', ['ionic'])
    	 	var bgGeo = window.plugins.backgroundGeoLocation;
 
 	    var updateAppState = function(response) {
-	    	// UPDATE LAST SENT HERE
 	        bgGeo.finish();
 	    };
 
 	    var callbackFn = function(location) {
-
-	        console.log('[js] BackgroundGeoLocation callback:  ' + location.latitude + ',' + location.longitude);
-	        // console.log(JSON.stringify(location));
+			
+			timestamp = new Date().getTime();
 	        
-	        // Do your HTTP request here to POST location to your server.
-	        // CHECK UUID and LAST SENT HERE
+	        // Only update the position if we have a valid UUID, if the user has enabled location tracking,
+	        // and if the user has not submitted in the last 15 minutes
+	        if ($appSettings.getDeviceId != "UNKOWN" && 
+	        	$appSettings.locationServices &&
+	        	timestamp - $appSettings.setTimeLastSubmit > 900000) {
+	        
+		        $http.get($appSettings.serverUrl + '/postLocation?lat=' + location.latitude + 
+		        											   '&long=' + location.longitude +
+		        											   '&time=' + timestamp
+		        ).
+			  	success(function(data, status, headers, config) {
+					console.log("/postLocation SUCCESS");
+					console.log(data);
+					$appSettings.setTimeLastSubmit(timestamp);
+				}).
+				error(function(data, status, headers, config) {
+					console.log("/postLocation ERROR");
+					console.log(data);
+				});
+
+	        } else {
+	        	console.log("Did not send POST: Invalid UUID, too soon, or location services turned off");
+	        }	
 
 	        updateAppState.call(this);
 
@@ -121,7 +142,8 @@ angular.module('starter.controllers', ['ionic'])
 	    };
 
 	    bgGeo.configure(callbackFn, failureFn, {
-	        url: $appSettings.serverUrl + '/postLocation',
+	        //url: $appSettings.serverUrl + '/postLocation',
+	        url: '',
 	        params: {},
 	        headers: {},
 	        desiredAccuracy: 10,

@@ -11,7 +11,7 @@ angular.module('starter.services', ['ionic'])
       deviceId: "UNKOWN",
       locationServices: true,
       fuzzingValue: 0,
-      timeLastSubmit: 0
+      timeLastSubmit: new Date.getTime() - 900000
     }
     window.localStorage.setItem("appState", JSON.stringify(appState));
   }
