@@ -3,7 +3,12 @@ from pymongo import MongoClient
 from bson import BSON, json_util
 from time import time
 from hashlib import sha1, md5
-#from sklearn import cluster
+from sklearn.cluster import DBSCAN
+from sklearn import metrics
+from sklearn.datasets.samples_generator import make_blobs
+from sklearn.preprocessing import StandardScaler
+import cluster
+import numpy as np
 import json
 import hmac
 import base64
@@ -52,7 +57,7 @@ CONTROLLERS
 
 # Gets all locations that are younger than TIME_DELAY
 @app.route("/getLocations")
-def getLocation():
+def getLocations():
     locations = db.locations
     str_locs = []
     for location in locations.find():
@@ -92,11 +97,8 @@ def registerUser():
 # Returns clustering information
 @app.route("/getClusters")
 def getClusters():
-    locations = db.locations
-    print locations
-    return json.dumps(locations, default=json_util.default)
-
-
+    clusters = cluster.clusterData()
+    return json.dumps(clusters, default=json_util.default)
 
 """
 
