@@ -14,14 +14,14 @@ from itertools import cycle, combinations
 import math
 
 PLOT = False
-POPULATION_THRESHOLD = 10
+POPULATION_THRESHOLD = 1
 CENTER = 'center'
 POPULATION = 'population'
 RADIUS = 'radius'
 
 DB_SCAN = 0
 MEAN_SHIFT = 1
-CLUSTER_ALG = DB_SCAN
+CLUSTER_ALG = MEAN_SHIFT
 
 client = MongoClient('localhost', 27017)
 flockdb = client.test_database
@@ -44,6 +44,7 @@ def processClusterData():
         existing['data'].append(list(raw_locations[i]))
         clusters[labels[i]] = existing
 
+    toDel = []
     for cluster, d in clusters.items():
         d['population'] = len(d['data'])
     
@@ -52,12 +53,17 @@ def processClusterData():
             if -1 in clusters: del clusters[-1]
         elif CLUSTER_ALG == MEAN_SHIFT:
             if d['population'] < POPULATION_THRESHOLD:
-                del clusters[cluster]
+                toDel.append(clusters[cluster])
                 continue
-            d['center'] = list(cluster_centers[labels[cluster]])
+            center = list(cluster_centers[cluster])
+            center.reverse()
+            d['center'] = center
         
         d['radius'] = meanDistance(d['data'])
         del d['data']
+
+    for item in toDel:
+        del clusters[item]
 
     return clusters
 
